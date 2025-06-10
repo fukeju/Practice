@@ -3,7 +3,6 @@ using namespace std;
 #include<string>
 #include<fstream>
 
-//earthquake
 #define LONG 5
 #define SHORT 2
 #define TIME 0.02
@@ -49,7 +48,7 @@ int main()
 	if (ifs.is_open())
 	{
 		ifs >> num;
-		cout << "ÎÄ¼þÒÑ´ò¿ª£¬¹²ÓÐ" << num << "¸öÊý¾Ý" << endl;
+		cout << "æ–‡ä»¶å·²æ‰“å¼€ï¼Œå…±æœ‰" << num << "ä¸ªæ•°æ®" << endl;
 		earthquakeArr = new int[num];
 		for (int i = 0; i < num; i++)
 		{
@@ -59,17 +58,13 @@ int main()
 
 
 		int Window[LONG] = { 0 };
-	/*	for (int i = 0; i < LONG; i++)
-		{
-			*(Window + i) = *(earthquakeArr + i);	//³õÊ¼»¯´°¿Ú
-		}
-		*/
+
 		for (int i=LONG-1;i<num;i++)
 		{
 			
 			for (int i = 0; i < LONG; i++)
 			{
-				*(Window + i) = *(earthquakeArr+i+j);	//³õÊ¼»¯´°¿Ú
+				*(Window + i) = *(earthquakeArr+i+j);	//åˆå§‹åŒ–çª—å£
 			}
 			j++;
 			longPower = powerLong(Window);
@@ -80,10 +75,10 @@ int main()
 				time += TIME;
 			}
 		}
-		cout << "Ô¤¼ÆµØÕðÊ±¼äÎª£º" << time << "s";
+		cout << "é¢„è®¡åœ°éœ‡æ—¶é—´ä¸ºï¼š" << time << "s";
 	}
 	else
 	{
-		cout << "ÎÄ¼þ´ò¿ªÊ§°Ü" << endl;
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥" << endl;
 	}
 }
