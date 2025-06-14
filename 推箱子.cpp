@@ -36,25 +36,7 @@ int main()
 	{
 		for (int j = 0; j < 12; j++)
 		{
-			switch (arr[i][j])
-			{
-			case 0:
-				putimage(134 + j * 61, 75 + i * 61, &images[0]);
-				break;
-			case 1:
-				putimage(134 + j * 61, 75 + i * 61, &images[1]);
-				break;
-			case 2:
-				putimage(134 + j * 61, 75 + i * 61, &images[2]);
-				break;
-			case 3:
-				putimage(134 + j * 61, 75 + i * 61, &images[3]);
-				break;
-			case 4:
-				putimage(134 + j * 61, 75 + i * 61, &images[4]);
-				break;
-			}
-			
+				putimage(134 + j * 61, 75 + i * 61, &images[arr[i][j]);
 		}
 	}
 
